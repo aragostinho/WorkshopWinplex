@@ -205,6 +205,20 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GestaoAcessos.Business\GestaoAcessos.Business.csproj">
+      <Project>{58767b4a-7e4b-4abc-a042-63762f8f8a57}</Project>
+      <Name>GestaoAcessos.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GestaoAcessos.Domain\GestaoAcessos.Domain.csproj">
+      <Project>{c05768d4-9645-40b6-ae96-16953ded2453}</Project>
+      <Name>GestaoAcessos.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GestaoAcessos.Utils\GestaoAcessos.Utils.csproj">
+      <Project>{3190dafd-710e-4b76-89f2-1974d7e31a93}</Project>
+      <Name>GestaoAcessos.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
