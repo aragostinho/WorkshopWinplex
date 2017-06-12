@@ -54,8 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\BAutenticacao.cs" />
-    <Compile Include="Components\IBAcesso.cs" />
-    <Compile Include="Components\BAcesso.cs" />
+    <Compile Include="Components\IBGestaoSenha.cs" />
+    <Compile Include="Components\BGestaoSenha.cs" />
     <Compile Include="Components\IBAutenticacao.cs" />
     <Compile Include="Core\AbstractGenericDao.cs" />
     <Compile Include="Core\IGenericDao.cs" />

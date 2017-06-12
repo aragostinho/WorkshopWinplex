@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace GestaoAcessos.Business.Components
 {
-    public class BAcesso: AbstractGenericDao<Acesso>, IBAcesso
+    public class BGestaoSenha: AbstractGenericDao<GestaoSenha>, IBGestaoSenha
     {
 
-        public BAcesso(ISession pSession)
+        public BGestaoSenha(ISession pSession)
             : base(pSession)
         {
 
 
         }
-        public BAcesso()
+        public BGestaoSenha()
             : base()
         {
 

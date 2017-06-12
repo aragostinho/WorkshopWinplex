@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace GestaoAcessos.Domain.Mappings
 {
-    public class PrestadorMap : ClassMap<Prestador>
+    public class ModuloPermissaoMap : ClassMap<ModuloPermissao>
     {
 
-        public PrestadorMap()
+        public ModuloPermissaoMap()
         {
-            Table("prestador");
+            Table("modulopermissao");
             LazyLoad();
             Id(x => x.Id).GeneratedBy.Identity().Column("id");
-            Map(x => x.Nome).Column("nome");
-            Map(x => x.ListaServicos).Column("listaservicos");
-            HasMany(x => x.GestaoSenha).KeyColumn("gestaosenhaid").Inverse().Cascade.All();
+            References(x => x.Colaborador).Column("colaboradorId");
+            References(x => x.Modulo).Column("moduloId");
+            Map(x => x.Permissao).Column("permissao").CustomType<PermissaoEnum>(); 
         }
     }
 }

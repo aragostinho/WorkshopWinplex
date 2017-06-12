@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GestaoAcessos.Business.Components
 {
-    public interface IBAcesso: IGenericDao<Acesso>
+    public interface IBGestaoSenha: IGenericDao<GestaoSenha>
     {
     }
 }

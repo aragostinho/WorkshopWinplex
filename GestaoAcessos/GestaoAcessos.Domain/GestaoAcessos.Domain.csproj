@@ -52,13 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Colaborador.cs" />
+    <Compile Include="Entities\GestaoSenha.cs" />
     <Compile Include="Entities\Autenticacao.cs" />
+    <Compile Include="Entities\ModuloPermissao.cs" />
     <Compile Include="Entities\Prestador.cs" />
-    <Compile Include="Entities\Acesso.cs" />
+    <Compile Include="Entities\Modulo.cs" />
+    <Compile Include="Enum\PermissaoEnum.cs" />
     <Compile Include="Enum\ServicosEnum.cs" />
     <Compile Include="Enum\UtilizadorEnum.cs" />
+    <Compile Include="Mappings\ModuloPermissaoMap.cs" />
+    <Compile Include="Mappings\ModuloMap.cs" />
+    <Compile Include="Mappings\ColaboradorMap.cs" />
     <Compile Include="Mappings\PrestadorMap.cs" />
-    <Compile Include="Mappings\AcessoMap.cs" />
+    <Compile Include="Mappings\GestaoSenhaMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

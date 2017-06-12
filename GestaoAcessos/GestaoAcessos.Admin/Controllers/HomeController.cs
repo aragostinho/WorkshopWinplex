@@ -15,7 +15,7 @@ namespace GestaoAcessos.Admin.Controllers
     public class HomeController : Controller
     {
 
-        private IBAcesso _IBAcesso;
+        private IBGestaoSenha _IBAcesso;
         public HomeController()
         {
             ISession _session = SessionFactory.Open();

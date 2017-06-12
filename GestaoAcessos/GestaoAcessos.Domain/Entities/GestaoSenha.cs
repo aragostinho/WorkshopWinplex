@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GestaoAcessos.Domain
 {
-    public class Acesso
+    public class GestaoSenha
     {
         public virtual int Id { get; set; }
         public virtual string Login { get; set; }

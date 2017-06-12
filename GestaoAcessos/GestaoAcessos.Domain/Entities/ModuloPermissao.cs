@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace GestaoAcessos.Domain
 {
-    public class Prestador
+    public class ModuloPermissao
     {
         public virtual int Id { get; set; }
-        public virtual string Nome { get; set; } 
-        public virtual string ListaServicos { get; set; }
-        public virtual IList<GestaoSenha> GestaoSenha { get; set; }
+        public virtual Colaborador Colaborador { get; set; }
+        public virtual Modulo Modulo { get; set; }
+        public virtual PermissaoEnum Permissao { get; set; }
     }
 }
