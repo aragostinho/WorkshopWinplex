@@ -1,56 +1,38 @@
 # WorkshopWinplex
 Workshop Scrum + UX:  Exemplo de aplicação de gestão acesso
-
+ 
+Acesso padrão admin: 
+login: winplex
+senha: pnl@016
 
 #MAPEAMENTO DE ACORDO COM O ESCOPO DO PROJETO http://www.winplex.com.br/workshop/projetoPHP.pdf
 
-Empresa
- - Id
- - CNPJ
- - Nome
- - Servicos
- - Email
+prestador
+ - id
+ - nome
+ - listaServicos 
+ 
+colaborar
+ - id
+ - nome
+ - senha
+ - senha
 
-Usuario
- - Id
- - Nome
- - Email
- - Cidade
- - Estado
- - AcessoId
+gestaosenha
+ - id
+ - login
+ - senha
+ - linkacesso
+ - utilizador (Empresa=0/Cliente=1)
+ - prestadorid
 
-EmpresaUsuario
- - EmpresaId
- - UsuarioId
+modulo
+  - id
+  - nome 
 
-Acesso
- - Id
- - Login
- - Senha
-
-Modulo
-  - Id
-  - Titulo
-  - Descricao
-
-Exemplo:
-  - Módulo de gestão de empresas
-  - Módulo de gestão de usuários de empresas
-  - Módulo de gestão de anúncios
-
-ModuloRestrito
-  - Id
-  - PermissaoEnum
-  - AcessoId
-
-PermissaoEnum:  
- Cadastrar, Listar, Visualizar, Excluir e Atualizar
-
-Exemplo de aplicação de permissões:
-  - Módulo de gestão de empresas
-     AcessoId 5  
-        - Pode Visualizar
-        - Pode Atualizar
-        - Não pode cadastrar
-        - Não pode excluir
-
+modulopermisao
+  - id
+  - permissao (Cadastrar, Listar, Visualizar, Excluir e Atualizar)
+  - colaboradorid
+  - moduloid 
+ 
