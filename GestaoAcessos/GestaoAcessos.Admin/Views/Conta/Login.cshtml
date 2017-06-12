@@ -1,0 +1,41 @@
+﻿@model GestaoAcessos.Admin.Models.Autenticacao
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>
+            Login
+        </h2>
+        <p>
+
+            @using (Html.BeginForm("Login", "Conta"))
+            {
+                <div>
+
+                    <div class="form-area">
+                        <div class="group">
+                            @Html.TextBoxFor(x => x.Login, new { @placeholder = "login", @class = "form-control" })
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="group">
+                            @Html.PasswordFor(x => x.Senha, new { @class = "form-controler", @placeholder = "senha" })
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-block">Acessar</button>
+                    </div>
+                    @if (Model.Erro != null)
+                    {
+                        <div style="color:red">@Model.Erro.Message</div>
+                    }  
+                </div>
+            }
+
+
+        </p>
+
+    </div>
+
+</div>
