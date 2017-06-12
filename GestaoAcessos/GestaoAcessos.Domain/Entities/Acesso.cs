@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestaoAcessos.Domain.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,11 @@ namespace GestaoAcessos.Domain
 {
     public class Acesso
     {
+        public virtual int Id { get; set; }
+        public virtual string Login { get; set; }
+        public virtual string Senha { get; set; }
+        public virtual string LinkAcesso { get; set; }
+        public virtual UtilizadorEnum Utilizador { get; set; }
+        public virtual Prestador Prestador { get; set; }
     }
 }

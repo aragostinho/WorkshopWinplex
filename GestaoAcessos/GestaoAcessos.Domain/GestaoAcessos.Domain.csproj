@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="GestaoAcessos.Utils">
+      <HintPath>..\GestaoAcessos.Utils\bin\Debug\GestaoAcessos.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,17 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Autenticacao.cs" />
+    <Compile Include="Entities\Prestador.cs" />
     <Compile Include="Entities\Acesso.cs" />
+    <Compile Include="Enum\ServicosEnum.cs" />
+    <Compile Include="Enum\UtilizadorEnum.cs" />
+    <Compile Include="Mappings\PrestadorMap.cs" />
+    <Compile Include="Mappings\AcessoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mappings\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GestaoAcessos.Utils\GestaoAcessos.Utils.csproj">
-      <Project>{3190dafd-710e-4b76-89f2-1974d7e31a93}</Project>
-      <Name>GestaoAcessos.Utils</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
