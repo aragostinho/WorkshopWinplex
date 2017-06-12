@@ -17,7 +17,7 @@ namespace GestaoAcessos.Domain.Mappings
             LazyLoad();
             Id(x => x.Id).GeneratedBy.Identity().Column("Id");
             Map(x => x.Nome).Column("Nome");
-            Map(x => x.Servico).Column("Servico").CustomType<ServicosEnum>();
+            Map(x => x.ListaServicos).Column("ListaServicos");
             HasMany(x => x.Acessos).KeyColumn("PrestadorId").Inverse().Cascade.All();
         }
     }

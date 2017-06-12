@@ -60,6 +60,7 @@
     <Compile Include="Core\AbstractGenericDao.cs" />
     <Compile Include="Core\IGenericDao.cs" />
     <Compile Include="Factories\AcessoFactory.cs" />
+    <Compile Include="Factories\SessionFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

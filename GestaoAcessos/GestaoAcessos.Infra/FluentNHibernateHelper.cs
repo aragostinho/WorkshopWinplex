@@ -1,6 +1,7 @@
 ﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
+using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -21,7 +22,7 @@ namespace GestaoAcessos.Infra
             _ISessionFactory = Fluently.Configure()
                 .Database(MySQLConfiguration.Standard.ConnectionString(connectionString))
                 .Mappings(x => x.FluentMappings.AddFromAssembly(assembly))
-                //.ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(true, true))
+                .ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(true, true)) 
                 .BuildSessionFactory();
 
             return _ISessionFactory;

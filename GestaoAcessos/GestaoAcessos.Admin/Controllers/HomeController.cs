@@ -1,4 +1,7 @@
 ﻿using GestaoAcessos.Admin.Utils;
+using GestaoAcessos.Business.Components;
+using GestaoAcessos.Business.Factories;
+using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +14,20 @@ namespace GestaoAcessos.Admin.Controllers
     [RoutePrefix("")]
     public class HomeController : Controller
     {
+
+        private IBAcesso _IBAcesso;
+        public HomeController()
+        {
+            ISession _session = SessionFactory.Open();
+            _IBAcesso = AcessoFactory.Acesso(_session);
+        }
+        protected override void Dispose(bool disposing)
+        {
+            SessionFactory.Close();
+        }
+
+
+
         [HttpGet]
         [Route("")]
         public ActionResult Index()
