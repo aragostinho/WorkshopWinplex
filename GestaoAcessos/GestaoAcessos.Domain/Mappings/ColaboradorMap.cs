@@ -19,6 +19,7 @@ namespace GestaoAcessos.Domain.Mappings
             Map(x => x.Nome).Column("nome");
             Map(x => x.Login).Column("login");
             Map(x => x.Senha).Column("senha");
+            Map(x => x.Admin).Column("admin");
         }
     }
 }

@@ -13,14 +13,16 @@ namespace GestaoAcessos.Domain.Entities
 
         }
 
-        public Autenticacao(string Nome, string Login)
+        public Autenticacao(string Nome, string Login, bool Admin)
         {
             this.Nome = Nome;
             this.Login = Login;
+            this.Admin = Admin;
         }
 
         public string Nome { get; set; }
         public string Login { get; set; }
+        public bool Admin { get; set; }
         public string CookiePath { get; set; }
         public DateTime Expiration { get; set; }
     }

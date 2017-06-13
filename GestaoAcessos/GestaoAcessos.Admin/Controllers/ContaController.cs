@@ -1,4 +1,6 @@
-﻿using GestaoAcessos.Business.Factories;
+﻿using GestaoAcessos.Business.Components;
+using GestaoAcessos.Business.Factories;
+using GestaoAcessos.Domain;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,8 +14,12 @@ namespace GestaoAcessos.Admin.Controllers
     public class ContaController : Controller
     {
 
+
+        private IBColaborador _IBColaborador;
         public ContaController()
         {
+            _IBColaborador = ColaboradorFactory.Colaborador();
+
 
 
         }
@@ -34,23 +40,27 @@ namespace GestaoAcessos.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                string login = ConfigurationManager.AppSettings["login"];
-                string nome = ConfigurationManager.AppSettings["nome"];
-                string senha = ConfigurationManager.AppSettings["senha"];
 
-                if (autenticacao.Login.Equals(login) && autenticacao.Senha.Equals(senha))
+                Colaborador _colaborador = _IBColaborador.Get(x => x.Login == autenticacao.Login && x.Senha == autenticacao.Senha).FirstOrDefault();
+
+                if (_colaborador != null)
                 {
+                    string login = _colaborador.Login;
+                    string nome = _colaborador.Nome;
+                    bool admin = _colaborador.Admin;
+
                     Domain.Entities.Autenticacao autenticacaoDomain = new Domain.Entities.Autenticacao();
                     autenticacaoDomain.Login = login;
                     autenticacaoDomain.Nome = nome;
-                    AcessoFactory.Autenticacao.setAuth(autenticacaoDomain); 
+                    autenticacaoDomain.Admin = admin;
+                    AcessoFactory.Autenticacao.setAuth(autenticacaoDomain);
                     Response.Redirect("~/");
+
                 }
                 else
-                    autenticacao.Erro = new Exception("Login ou senha inválidos!");                 
+                    autenticacao.Erro = new Exception("Login ou senha inválidos!");
+            }
 
-
-            }  
             return View(autenticacao);
         }
     }

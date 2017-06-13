@@ -31,16 +31,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FluentNHibernate.dll</HintPath>
     </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,11 +54,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\BAutenticacao.cs" />
+    <Compile Include="Components\BColaborador.cs" />
+    <Compile Include="Components\IBColaborador.cs" />
     <Compile Include="Components\IBGestaoSenha.cs" />
     <Compile Include="Components\BGestaoSenha.cs" />
     <Compile Include="Components\IBAutenticacao.cs" />
     <Compile Include="Core\AbstractGenericDao.cs" />
     <Compile Include="Core\IGenericDao.cs" />
+    <Compile Include="Factories\ColaboradorFactory.cs" />
     <Compile Include="Factories\AcessoFactory.cs" />
     <Compile Include="Factories\SessionFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
