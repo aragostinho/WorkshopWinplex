@@ -1,4 +1,4 @@
-﻿using GestaoAcessos.Infra;
+﻿using GestaoAcessos.Infrastructure;
 using NHibernate;
 using System;
 using System.Collections.Generic;

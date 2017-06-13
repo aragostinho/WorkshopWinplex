@@ -1,5 +1,5 @@
 ﻿using GestaoAcessos.Business.Components;
-using GestaoAcessos.Infra;
+using GestaoAcessos.Infrastructure;
 using NHibernate;
 using System;
 using System.Collections.Generic;

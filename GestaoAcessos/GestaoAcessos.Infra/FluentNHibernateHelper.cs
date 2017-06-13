@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestaoAcessos.Infra
+namespace GestaoAcessos.Infrastructure
 {
     public static class FluentNHibernateHelper
     {

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoAcessos.Business", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoAcessos.Utils", "GestaoAcessos.Utils\GestaoAcessos.Utils.csproj", "{3190DAFD-710E-4B76-89F2-1974D7E31A93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoAcessos.Infra", "GestaoAcessos.Infra\GestaoAcessos.Infra.csproj", "{7539961E-F309-437D-9901-B4F1E14AECF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoAcessos.Infrastructure", "GestaoAcessos.Infra\GestaoAcessos.Infrastructure.csproj", "{7539961E-F309-437D-9901-B4F1E14AECF3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoAcessos.Domain", "GestaoAcessos.Domain\GestaoAcessos.Domain.csproj", "{C05768D4-9645-40B6-AE96-16953DED2453}"
 EndProject

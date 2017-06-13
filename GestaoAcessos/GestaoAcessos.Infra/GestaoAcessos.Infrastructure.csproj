@@ -7,8 +7,8 @@
     <ProjectGuid>{7539961E-F309-437D-9901-B4F1E14AECF3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GestaoAcessos.Infra</RootNamespace>
-    <AssemblyName>GestaoAcessos.Infra</AssemblyName>
+    <RootNamespace>GestaoAcessos.Infrastructure</RootNamespace>
+    <AssemblyName>GestaoAcessos.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
