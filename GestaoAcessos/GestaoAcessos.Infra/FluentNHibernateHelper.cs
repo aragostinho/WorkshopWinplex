@@ -26,6 +26,7 @@ namespace GestaoAcessos.Infra
                 .BuildSessionFactory();
 
             return _ISessionFactory;
+
         }
         public static ISessionFactory SessionFactory(System.Reflection.Assembly pAssembly)
         {
