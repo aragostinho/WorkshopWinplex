@@ -4,6 +4,7 @@ Workshop Scrum + UX:  Exemplo de aplicação de gestão acesso
 ## SETUP DE FERRAMENTAS
 1. Visual Studio 2015 Community - https://www.visualstudio.com/pt-br/downloads/?rr=https%3A%2F%2Fwww.google.com.br%2F
 2. MySql Work Bench 6.3 - https://dev.mysql.com/downloads/workbench/
+
 https://bucket-replication.s3.amazonaws.com/mysql-installer-community-5.7.18.1.msi
 3. [opcional] Update 3 Visua Studio 2015 - https://www.visualstudio.com/pt-br/news/releasenotes/vs2015-update3-vs
 
