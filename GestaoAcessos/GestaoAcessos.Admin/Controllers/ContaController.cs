@@ -63,5 +63,16 @@ namespace GestaoAcessos.Admin.Controllers
 
             return View(autenticacao);
         }
+
+        [HttpGet]
+        [Route("Deslogar")]
+        public ActionResult Deslogar()
+        {
+            AcessoFactory.Autenticacao.removeAuth();
+            Response.Redirect("~/");
+
+            return View();
+        }
+
     }
 }
