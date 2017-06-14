@@ -12,19 +12,19 @@ namespace GestaoAcessos.Business.Factories
     public static class AcessoFactory
     {
 
-        private static IBGestaoSenha _acesso;
-        public static IBGestaoSenha Acesso()
+        private static IBGestaoSenha _gestaoSenha;
+        public static IBGestaoSenha GestaoSenha()
         {
-            _acesso = new BGestaoSenha(FluentNHibernateHelper.GetSession);
-            return _acesso;
+            _gestaoSenha = new BGestaoSenha(FluentNHibernateHelper.GetSession);
+            return _gestaoSenha;
         }
-        public static IBGestaoSenha Acesso(ISession pSession)
+        public static IBGestaoSenha GestaoSenha(ISession pSession)
         {
 
             if (pSession != null)
-                _acesso = new BGestaoSenha(pSession);
+                _gestaoSenha = new BGestaoSenha(pSession);
 
-            return _acesso;
+            return _gestaoSenha;
 
         }
 

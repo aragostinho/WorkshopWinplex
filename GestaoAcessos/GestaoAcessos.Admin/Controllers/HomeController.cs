@@ -14,13 +14,11 @@ namespace GestaoAcessos.Admin.Controllers
     [RoutePrefix("")]
     public class HomeController : Controller
     {
-
-        private IBGestaoSenha _IBAcesso;
+ 
         public HomeController()
         {
 
-            ISession _session = SessionFactory.Open();
-            _IBAcesso = AcessoFactory.Acesso(_session);
+            ISession _session = SessionFactory.Open(); 
         }
         protected override void Dispose(bool disposing)
         {

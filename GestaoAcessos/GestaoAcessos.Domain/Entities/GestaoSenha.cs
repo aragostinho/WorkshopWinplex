@@ -14,6 +14,7 @@ namespace GestaoAcessos.Domain
         public virtual string Senha { get; set; }
         public virtual string LinkAcesso { get; set; }
         public virtual UtilizadorEnum Utilizador { get; set; }
-        public virtual Prestador Prestador { get; set; }
+        public virtual string Prestador { get; set; }
+        public virtual string ListaServicos { get; set; }
     }
 }

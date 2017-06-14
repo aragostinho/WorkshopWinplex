@@ -1,6 +1,6 @@
 ﻿@using GestaoAcessos.Admin.Utils
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -18,10 +18,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div style="color:#FFFFFF ">Olá @Utilitario.autenticacao.Nome (<a href="@Url.Action("Deslogar","Conta")">deslogar</a>)</div> 
+                <div style="color:#FFFFFF; padding-top: 10px;">Olá @Utilitario.autenticacao.Nome,
+                <a href="@Url.Action("Listar","GestaoSenha")">Listar Senhas</a>
+                | <a href="@Url.Action("Cadastrar","GestaoSenha")">Cadastrar Senha</a>
+                | <a href="@Url.Action("Deslogar","Conta")">Deslogar</a>
             </div>
-           
         </div>
+
+    </div>
     </div>
     <div class="container body-content">
         @RenderBody()

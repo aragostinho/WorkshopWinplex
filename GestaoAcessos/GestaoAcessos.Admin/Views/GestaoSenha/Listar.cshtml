@@ -1,0 +1,56 @@
+﻿@model GestaoAcessos.Admin.Models.GestaoSenha
+
+@{
+    ViewBag.Title = "Listar";
+    Layout = "~/Views/Shared/_LayoutLogado.cshtml";
+}
+
+<h2>Listar</h2> 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Prestador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Senha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkAcesso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ListaServicos)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.ListaSenhas)
+    {
+        <tr>
+            <td>
+                @item.Prestador
+            </td>
+            <td>
+                @item.Login
+            </td>
+            <td>
+                @item.Senha
+            </td>
+            <td>
+                @item.LinkAcesso
+            </td>
+            <td>
+                @item.ListaServicos
+            </td>
+            <td>
+                @Html.ActionLink("Visualizar", "GestaoSenha", new { id = item.Id })
+            </td>
+        </tr>
+
+    }
+
+
+
+</table>

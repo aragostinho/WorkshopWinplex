@@ -18,8 +18,9 @@ namespace GestaoAcessos.Domain.Mappings
             Map(x => x.Login).Column("login");
             Map(x => x.Senha).Column("senha");
             Map(x => x.LinkAcesso).Column("linkacesso");
+            Map(x => x.ListaServicos).Column("listaservicos");
             Map(x => x.Utilizador).Column("utilizador");
-            References(x => x.Prestador).Column("prestadorid"); 
+            Map(x => x.Prestador).Column("prestador");
         }
     }
 }

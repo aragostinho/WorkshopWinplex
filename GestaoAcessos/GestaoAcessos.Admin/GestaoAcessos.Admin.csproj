@@ -153,10 +153,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContaController.cs" />
+    <Compile Include="Controllers\GestaoSenhaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\GestaoSenha.cs" />
     <Compile Include="Models\Autenticacao.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,6 +202,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Conta\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutLogado.cshtml" />
+    <Content Include="Views\GestaoSenha\Cadastro.cshtml" />
+    <Content Include="Views\GestaoSenha\Editar.cshtml" />
+    <Content Include="Views\GestaoSenha\Listar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
